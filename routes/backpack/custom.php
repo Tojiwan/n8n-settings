@@ -16,6 +16,9 @@ Route::group([
     ),
     'namespace' => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
+    Route::get('workflow-form', [\App\Http\Controllers\Admin\WorkflowTriggerController::class, 'create']);
+    Route::post('workflow-form', [\App\Http\Controllers\Admin\WorkflowTriggerController::class, 'submit']);
+
 }); // this should be the absolute last line of this file
 
 /**

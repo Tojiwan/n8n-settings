@@ -20,13 +20,13 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
 });
 
-Route::get('/test-webhook', function () {
-    $response = Http::post('https://n8n.tigernethost.com/form/5f0f3785-f332-4d47-bd83-abfa3446a1f2', [
-        'name' => 'John Doe',
-        'email' => 'john@example.com',
+Route::get('/test-n8n', function () {
+    $response = Http::post('https://n8n.tigernethost.com/webhook-test/backpack-event', [
+        'name' => 'Dev',
+        'email' => 'devtojiwan@gmail.com',
     ]);
 
-    return $response->body(); // for debugging
+    return $response->body();
 });
 
 require __DIR__.'/auth.php';
