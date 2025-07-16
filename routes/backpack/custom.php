@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\N8nWorkflowController;
 use Illuminate\Support\Facades\Route;
 
 // --------------------------
@@ -19,6 +20,8 @@ Route::group([
     Route::get('workflow-form', [\App\Http\Controllers\Admin\WorkflowTriggerController::class, 'create']);
     Route::post('workflow-form', [\App\Http\Controllers\Admin\WorkflowTriggerController::class, 'submit']);
 
+    Route::get('workflows', [N8nWorkflowController::class, 'index']);
+    Route::patch('workflows/{id}/toggle', [N8nWorkflowController::class, 'toggle']);
 }); // this should be the absolute last line of this file
 
 /**
