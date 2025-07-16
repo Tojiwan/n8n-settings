@@ -16,7 +16,6 @@ class WorkflowTriggerController extends CrudController
     public function submit(Request $request)
     {
         $data = $request->validate([
-            'subject' => 'required|string',
             'message' => 'required|string',
         ]);
 
