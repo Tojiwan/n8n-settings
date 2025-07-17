@@ -3,6 +3,6 @@
         {{ trans('backpack::base.dashboard') }}</a></li>
 
 <x-backpack::menu-dropdown title="AI Chatbot" icon="las la-robot">
-    <x-backpack::menu-dropdown-item title="Workflows" icon="la la-project-diagram" :link="backpack_url('qworkflows')" />
+    <x-backpack::menu-dropdown-item title="Workflows" icon="la la-project-diagram" :link="backpack_url('workflows')" />
     <x-backpack::menu-dropdown-item title="System Configuration" icon="la la-gear" :link="backpack_url('workflow-form')" />
 </x-backpack::menu-dropdown>
