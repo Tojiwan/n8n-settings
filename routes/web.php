@@ -20,13 +20,4 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
 });
 
-Route::get('/test-n8n', function () {
-    $response = Http::post('https://n8n.tigernethost.com/webhook-test/backpack-event', [
-        'name' => 'Dev',
-        'email' => 'devtojiwan@gmail.com',
-    ]);
-
-    return $response->body();
-});
-
 require __DIR__.'/auth.php';

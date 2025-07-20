@@ -17,8 +17,6 @@ Route::group([
     ),
     'namespace' => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
-    Route::get('workflow-form', [\App\Http\Controllers\Admin\WorkflowTriggerController::class, 'create']);
-    Route::post('workflow-form', [\App\Http\Controllers\Admin\WorkflowTriggerController::class, 'submit']);
 
     Route::get('workflows', [N8nWorkflowController::class, 'index']);
     Route::patch('workflows/{id}/toggle', [N8nWorkflowController::class, 'toggle']);
