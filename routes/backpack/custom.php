@@ -22,6 +22,9 @@ Route::group([
 
     Route::get('workflows', [N8nWorkflowController::class, 'index']);
     Route::patch('workflows/{id}/toggle', [N8nWorkflowController::class, 'toggle']);
+    Route::get('workflows/{id}/edit', [N8nWorkflowController::class, 'edit']);
+    Route::post('workflows/{id}/update', [N8nWorkflowController::class, 'update']);
+
 }); // this should be the absolute last line of this file
 
 /**
