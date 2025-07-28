@@ -13,13 +13,16 @@ return new class extends Migration
     {
         Schema::create('workflow_prompts', function (Blueprint $table) {
             $table->id();
-            $table->string('workflow_id')->index(); // n8n workflow ID
+            $table->string('workflow_id')->index();
+            $table->string('node_id')->nullable();
             $table->string('workflow_name')->nullable();
             $table->longText('system_prompt');
             $table->timestamps();
+
+            // Ensure no duplicate workflow_id + node_id
+            $table->unique(['workflow_id', 'node_id']);
         });
     }
-
     /**
      * Reverse the migrations.
      */
