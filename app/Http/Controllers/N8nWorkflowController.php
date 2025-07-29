@@ -66,7 +66,6 @@ class N8nWorkflowController extends Controller
         $workflow = $workflowResponse->json();
 
         // Filter nodes to AI Agent / OpenAI nodes, excluding sticky notes & disabled nodes
-        // Filter nodes to only AI-related nodes (exclude sticky & disabled)
         $aiNodes = collect($workflow['nodes'] ?? [])
             ->filter(function ($node) {
                 $type = $node['type'] ?? '';
