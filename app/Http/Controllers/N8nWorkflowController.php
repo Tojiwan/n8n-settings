@@ -135,7 +135,7 @@ class N8nWorkflowController extends Controller
                     Log::info("Updating node: {$node['id']}", ['node' => $node]);
 
                     if ($node['type'] === '@n8n/n8n-nodes-langchain.agent') {
-                        $systemPrompt = $request->input('system_prompt');
+                        $systemPrompt = html_entity_decode($request->input('system_prompt'), ENT_QUOTES | ENT_HTML5);
 
                         if (!isset($node['parameters']['options']) || !is_array($node['parameters']['options'])) {
                             $node['parameters']['options'] = [];
