@@ -48,7 +48,7 @@ class N8nWorkflowController extends Controller
 
             return response()->json(['success' => true]);
         } catch (\Throwable $e) {
-            Log::error('Workflow toggle error: ' . $e->getMessage());
+            // Log::error('Workflow toggle error: ' . $e->getMessage());
             return response()->json(['success' => false, 'message' => 'Server error'], 500);
         }
     }
@@ -132,7 +132,7 @@ class N8nWorkflowController extends Controller
             // Update the selected node's prompt
             foreach ($workflow['nodes'] as &$node) {
                 if ($node['id'] === $request->input('node_id')) {
-                    Log::info("Updating node: {$node['id']}", ['node' => $node]);
+                    // Log::info("Updating node: {$node['id']}", ['node' => $node]);
 
                     if ($node['type'] === '@n8n/n8n-nodes-langchain.agent') {
                         $systemPrompt = html_entity_decode($request->input('system_prompt'), ENT_QUOTES | ENT_HTML5);
@@ -209,14 +209,14 @@ class N8nWorkflowController extends Controller
             }
             unset($node);
 
-            Log::info('Updated workflow payload', $cleanWorkflow);
+            // Log::info('Updated workflow payload', $cleanWorkflow);
             // dd(json_encode($cleanWorkflow, JSON_PRETTY_PRINT));
 
             $response = Http::withHeaders([
                 'X-N8N-API-KEY' => config('services.n8n.api_key'),
                 'accept' => 'application/json',
             ])->put(config('services.n8n.base_url') . "/api/v1/workflows/{$id}", $cleanWorkflow);
-            Log::info('n8n update response', [$response->status(), $response->body()]);
+            // Log::info('n8n update response', [$response->status(), $response->body()]);
 
             if (!$response->successful()) {
                 return back()->with('error', 'n8n API update failed: ' . $response->body());
@@ -251,7 +251,7 @@ class N8nWorkflowController extends Controller
 
             return redirect('/admin/workflows')->with('success', 'Workflow updated successfully.');
         } catch (\Exception $e) {
-            Log::error('Failed to update workflow: ' . $e->getMessage());
+            // Log::error('Failed to update workflow: ' . $e->getMessage());
             return back()->with('error', 'Failed to update workflow.');
         }
     }
