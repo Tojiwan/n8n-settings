@@ -1,7 +1,7 @@
 @extends(backpack_view('blank'))
 
 @section('content')
-    <h1>My n8n Workflows</h1>
+    <h1>My N8N Workflows</h1>
     <table class="table">
         <thead>
             <tr>
