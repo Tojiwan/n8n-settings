@@ -15,31 +15,31 @@ class SampleBusinessSeeder extends Seeder
         $businesses = [
             [
                 'name' => 'Tigernethost Demo',
-                'name-slug' => 'tigernethost-demo',
+                'name_slug' => 'tigernethost-demo',
                 'email' => 'demo@tigernethost.com',
                 'phone' => '09175100074',
             ],
             [
                 'name' => 'LionTech Solutions',
-                'name-slug' => 'liontech-solutions',
+                'name_slug' => 'liontech-solutions',
                 'email' => 'info@liontech.com',
                 'phone' => '09171234567',
             ],
             [
                 'name' => 'PandaSoft Innovations',
-                'name-slug' => 'pandasoft-innovations',
+                'name_slug' => 'pandasoft-innovations',
                 'email' => 'contact@pandasoft.com',
                 'phone' => '09221234567',
             ],
             [
                 'name' => 'KoalaWorks Co.',
-                'name-slug' => 'koalaworks-co',
+                'name_slug' => 'koalaworks-co',
                 'email' => 'support@koalaworks.co',
                 'phone' => '09189998877',
             ],
             [
                 'name' => 'Falcon Enterprises',
-                'name-slug' => 'falcon-enterprises',
+                'name_slug' => 'falcon-enterprises',
                 'email' => 'admin@falconent.com',
                 'phone' => '09335554422',
             ],
