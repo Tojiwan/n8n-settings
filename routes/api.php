@@ -2,6 +2,7 @@
 // routes/api.php
 use App\Http\Controllers\AiBotController;
 use App\Http\Controllers\AiChatController;
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('ping', fn () => response()->json(['ok' => true]));
@@ -20,3 +21,6 @@ Route::middleware('ai.portal')->group(function () {
 // Activate/deactivate using existing "enabled"
 Route::post('ai/bots/{id}/activate',   [AiBotController::class, 'activate']);
 Route::post('ai/bots/{id}/deactivate', [AiBotController::class, 'deactivate']);
+
+// Sample Site 
+Route::get('/site/{business:name_slug}', [SiteController::class, 'show'])->name('site.show');

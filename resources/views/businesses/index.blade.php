@@ -55,6 +55,12 @@
 
                         {{-- Webhook display --}}
                         {{-- <div id="webhook-{{ $business->id }}" class="mt-2 small text-break text-success"></div> --}}
+
+                        <a class="btn btn-outline-secondary btn-sm ms-0 mt-2"
+                            href="{{ route('site.show', ['business' => $business->name_slug]) }}"
+                            target="_blank">
+                            Preview Site
+                        </a>
                     </div>
                 </div>
             </div>

@@ -31,13 +31,13 @@
                         <label class="form-label fw-semibold">Give AI context</label>
                         <textarea id="context" class="form-control mb-3" rows="8" style="resize:none" placeholder="Share all the info">{{ $ctx->context ?? '' }}</textarea>
 
-                        <details class="mb-3">
+                        {{-- <details class="mb-3">
                             <summary class="fw-semibold" style="cursor:pointer">Advanced (optional)</summary>
                             <label class="form-label mt-3">Guardrails</label>
                             <textarea id="guardrails" class="form-control mb-3" rows="3" style="resize:none">{{ $ctx->guardrails ?? '' }}</textarea>
                             <label class="form-label">System</label>
                             <textarea id="system" class="form-control mb-3" rows="3" style="resize:none">{{ $ctx->system ?? '' }}</textarea>
-                        </details>
+                        </details> --}}
 
                         <div class="d-flex gap-2">
                             <button id="saveBtn" class="btn btn-primary">Save</button>
