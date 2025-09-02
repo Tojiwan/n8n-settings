@@ -123,4 +123,5 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'portal_api_bearer' => env('PORTAL_API_BEARER',''),
 ];

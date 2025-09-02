@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AiStudioController;
+use App\Http\Controllers\BusinessController;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
@@ -19,5 +21,8 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/password', 'settings.password')->name('settings.password');
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
 });
+
+Route::get('/businesses', [BusinessController::class, 'index']);
+Route::get('/businesses/{business}/ai', [AiStudioController::class, 'edit'])->name('ai.studio');
 
 require __DIR__.'/auth.php';
