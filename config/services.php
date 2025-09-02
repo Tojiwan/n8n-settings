@@ -38,6 +38,7 @@ return [
     'n8n' => [
         'base_url' => env('N8N_BASE_URL'),
         'api_key' => env('N8N_API_KEY'),
+        'openai_model'   => env('AI_MODEL', 'gpt-4o-mini'),
+        'openai_cred_id' => env('N8N_OPENAI_CRED_ID'),
     ],
-
 ];
