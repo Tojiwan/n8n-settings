@@ -63,21 +63,6 @@ class AiBotController extends Controller
             'system' => 'nullable|string',
         ]);
         $ctx = AiContext::updateOrCreate(['business_id' => (int)$businessId], $data);
-
-        // Notify n8n webhook server-side (if a bot/workflow exists)
-        // $bot = AiBot::where('business_id', (int)$businessId)->first();
-        // if ($bot && $bot->n8n_webhook_path) {
-        //     $webhook = rtrim(config('services.n8n.base_url'), '/') . '/webhook-test/' . $bot->n8n_webhook_path;
-        //     Http::asJson()->post($webhook, [
-        //         'event'      => 'context_updated',
-        //         'businessId' => (int)$businessId,
-        //         'goal'       => $data['goal'],
-        //         'context'    => $data['context'],
-        //         'guardrails' => $data['guardrails'] ?? '',
-        //         'system'     => $data['system'] ?? '',
-        //     ])->throw();
-        // }
-
         return response()->json(['message' => 'Context updated', 'context' => $ctx]);
     }
 

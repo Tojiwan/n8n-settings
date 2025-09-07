@@ -25,4 +25,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/businesses', [BusinessController::class, 'index']);
 Route::get('/businesses/{business}/ai', [AiStudioController::class, 'edit'])->name('ai.studio');
 
+Route::get('/businesses', [BusinessController::class, 'index'])->name('businesses.index');
+Route::get('/businesses/{business}/ai', [AiStudioController::class, 'edit'])->name('businesses.ai');
+
 require __DIR__.'/auth.php';
