@@ -6,7 +6,7 @@
         <div class="d-flex align-items-center justify-content-between mb-3">
             <h3 class="m-0">AI Studio — {{ $business->name }}</h3>
             @if ($webhookUrl)
-                <span class="badge text-bg-light">Webhook ready</span>
+                {{-- <span class="badge text-bg-light">Webhook ready</span> --}}
             @else
                 <span class="badge text-bg-warning text-dark">Enable & Activate the bot to test</span>
             @endif
