@@ -17,31 +17,31 @@ class SampleBusinessSeeder extends Seeder
                 'name' => 'Tigernethost Demo',
                 'name_slug' => 'tigernethost-demo',
                 'email' => 'demo@tigernethost.com',
-                'phone' => '09175100074',
+                'mobile' => '09175100074',
             ],
             [
                 'name' => 'LionTech Solutions',
                 'name_slug' => 'liontech-solutions',
                 'email' => 'info@liontech.com',
-                'phone' => '09171234567',
+                'mobile' => '09171234567',
             ],
             [
                 'name' => 'PandaSoft Innovations',
                 'name_slug' => 'pandasoft-innovations',
                 'email' => 'contact@pandasoft.com',
-                'phone' => '09221234567',
+                'mobile' => '09221234567',
             ],
             [
                 'name' => 'KoalaWorks Co.',
                 'name_slug' => 'koalaworks-co',
                 'email' => 'support@koalaworks.co',
-                'phone' => '09189998877',
+                'mobile' => '09189998877',
             ],
             [
                 'name' => 'Falcon Enterprises',
                 'name_slug' => 'falcon-enterprises',
                 'email' => 'admin@falconent.com',
-                'phone' => '09335554422',
+                'mobile' => '09335554422',
             ],
         ];
 

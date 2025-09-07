@@ -11,7 +11,7 @@ class Business extends Model
         'name',
         'name-slug', 
         'email', 
-        'phone'
+        'mobile'
     ];
 
     // Automatically set slug when creating/updating

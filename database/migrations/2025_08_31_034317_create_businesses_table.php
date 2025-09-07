@@ -16,7 +16,7 @@ return new class extends Migration
             $t->string('name');
             $t->string('name_slug')->unique();
             $t->string('email')->nullable();
-            $t->string('phone')->nullable();
+            $t->string('mobile')->nullable();
             $t->timestamps();
         });
     }
